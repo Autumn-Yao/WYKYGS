@@ -1,0 +1,95 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>舞阳矿业公司</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!-- 头部区域 -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <h1 class="logo">舞阳矿业公司</h1>
+                <p class="slogan">Product Manual</p>
+            </div>
+        </div>
+    </header>
+    
+    <!-- 导航栏 -->
+    <nav>
+        <div class="nav-container container">
+            <div class="hamburger" id="hamburger">
+                <div class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="a1.html">公司简介</a></li>
+                <li><a href="a2.html">产品展示</a></li>
+                <li><a href="a3.html">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Banner区域 -->
+    <div class="banner container" style="background-image: url('images/111.png');">
+        <div class="banner-overlay">
+            <h2>专业的矿业解决方案提供商</h2>
+          <p>舞阳矿业公司致力于为客户提供高质量的矿业产品支持，服务客户30余年</p>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+    
+    <!-- 主要内容区域 -->
+    <main class="container">
+   <!-- 公司简介部分 -->
+        <section class="gsjj-section">
+            <h2 class="gsjj-title">公司简介</h2>
+            
+            <!-- 左图右文 -->
+            <div class="gsjj-content">
+                <div class="gsjj-left-image"><img src="images/1.png"width="497" height="433"></div>
+                <div class="gsjj-right-text">
+                    <h3>公司简介</h3>
+                    <p>河南钢铁集团舞阳矿业公司（以下简称为舞阳矿业）注册资本为16.9亿元，是河  南钢铁集团的铁矿⽯原料基地。主要⽣产经营范围为：铁矿开采⼯程、选矿⼯程与⽣  产，剥岩、巷道采掘；主导产品为铁精矿，是河南省认定的唯⼀铁矿资源开发利⽤优  势企业、“安全⽣产双重预防机制”标准化⽰范企业，绿⾊矿⼭⽰范企业，在中国冶  ⾦矿⼭企业50强中排名第23位。  公司下辖铁⼭矿区和⼋台矿区，保有铁矿⽯资源储量约3.23亿吨，设有铁⼭矿、  ⼋台矿、⾮矿实业公司3个⽣产单位和党政综合办公室等6个⼆级管理机构，拥有控股  公司安舞科技公司、舞钢华祥公司，参股公司铭波充填材料公司.</p>
+              </div>
+            </div>
+            
+            <!-- 右图左文 -->
+            <div class="gsjj-content">
+                <div class="gsjj-left-text">
+                    <h3>非矿实业</h3>
+                    <p>舞阳矿业⾮矿实业公司深耕锚杆、锚⽹、钢芯铝三种⾮矿拳头产品。  锚杆、锚⽹⽣产线始建于2008年，占地10000平⽅⽶，拥有⾃动锚杆⽣产  线、锚⽹⽣产线各两条，年产锚杆60万套，锚⽹30万张。锚杆锚⽹产品⼴泛应⽤  于井下巷道⽀护。钢芯铝⽣产线始建于2019年，占地30000平⽅⽶，拥有⾃动上  铝装置和三条现代化钢芯铝⽣产线，年产钢芯铝20000吨，产品销往全国各地</p>
+              </div>
+                <div class="gsjj-right-image"><img src="images/2.png" width="497" height="433"></div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer>
+        <div class="copyright container">
+            <p>© 2025 舞阳矿业公司 版权所有</p>
+        </div>
+    </footer>
+    
+    <script>
+        // 汉堡菜单功能
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // 点击页面其他区域关闭菜单
+        document.addEventListener('click', (event) => {
+            if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

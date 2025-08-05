@@ -1,0 +1,114 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>舞阳矿业公司</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!-- 头部区域 -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <h1 class="logo">舞阳矿业公司</h1>
+                <p class="slogan">Product Manual</p>
+            </div>
+        </div>
+    </header>
+    
+    <!-- 导航栏 -->
+    <nav>
+        <div class="nav-container container">
+            <div class="hamburger" id="hamburger">
+                <div class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="a1.html">公司简介</a></li>
+                <li><a href="a2.html">产品展示</a></li>
+                <li><a href="a3.html">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Banner区域 -->
+    <div class="banner container" style="background-image: url('images/111.png');">
+        <div class="banner-overlay">
+            <h2>专业的矿业解决方案提供商</h2>
+          <p>舞阳矿业公司致力于为客户提供高质量的矿业产品支持，服务客户30余年</p>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+    
+    <!-- 主要内容区域 -->
+    <main class="container">
+    <!-- 联系我们部分 -->
+        <section class="lxwm-section">
+            <h2 class="lxwm-title">联系我们</h2>
+            <p class="lxwm-intro">如果您对我们的产品和服务有任何疑问或需要进一步的合作，请随时与我们联系。我们的团队将竭诚为您提供专业的咨询和解决方案。</p>
+            
+            <div class="lxwm-content">
+                <!-- 左侧联系方式 -->
+                <div class="lxwm-info">
+                    <h3 class="lxwm-info-title">联系方式</h3>
+                    
+                    <div class="lxwm-info-item">
+                        <span class="lxwm-info-label">电话</span>
+                        <span class="lxwm-info-value">0375-3309089</span>
+                        <span class="lxwm-info-value">0375-3309381</span>
+                        <span class="lxwm-info-value">0375-3309408</span>
+                    </div>
+                    
+                    <div class="lxwm-info-item">
+                        <span class="lxwm-info-label">地址</span>
+                        <span class="lxwm-info-value">河南省舞钢市朱兰</span>
+                    </div>
+                    
+                    <div class="lxwm-info-item">
+                        <span class="lxwm-info-label">邮箱</span>
+                        <span class="lxwm-info-value">************.com</span>
+                    </div>
+                    
+                    <div class="lxwm-info-item">
+                        <span class="lxwm-info-label">工作时间</span>
+                        <span class="lxwm-info-value">周一至周五：8:00 - 17:30</span>
+                        <span class="lxwm-info-value">周六：9:00 - 12:00</span>
+                    </div>
+                    
+                    <div class="lxwm-info-item">
+                        <span class="lxwm-info-label">交通路线</span>
+                        <span class="lxwm-info-value">可乘坐10路公交车直达</span>
+                        <span class="lxwm-info-value">距舞钢市高速路口约10公里</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer>
+        <div class="copyright container">
+            <p>© 2025 舞阳矿业公司 版权所有</p>
+        </div>
+    </footer>
+    
+    <script>
+        // 汉堡菜单功能
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // 点击页面其他区域关闭菜单
+        document.addEventListener('click', (event) => {
+            if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

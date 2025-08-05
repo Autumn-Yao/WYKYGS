@@ -1,0 +1,85 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>舞阳矿业公司</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!-- 头部区域 -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <h1 class="logo">舞阳矿业公司</h1>
+                <p class="slogan">Product Manual</p>
+            </div>
+        </div>
+    </header>
+    
+    <!-- 导航栏 -->
+    <nav>
+        <div class="nav-container container">
+            <div class="hamburger" id="hamburger">
+                <div class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="a1.html">公司简介</a></li>
+                <li><a href="a2.html">产品展示</a></li>
+                <li><a href="a3.html">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Banner区域 -->
+    <div class="banner container" style="background-image: url('images/111.png');">
+        <div class="banner-overlay">
+            <h2>专业的矿业解决方案提供商</h2>
+          <p>舞阳矿业公司致力于为客户提供高质量的矿业产品支持，服务客户30余年</p>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+    
+    <!-- 主要内容区域 -->
+    <main class="container">
+        <!-- 关于我们部分 -->
+        <section class="about-section">
+            <h2 class="section-title">关于我们</h2>
+            <div class="about-content">
+                <div class="about-image"><img src="images/11.png" width="609" height="485"></div>
+                <div class="about-text">
+                    <p>舞阳矿业公司成立于1985年，是中国领先的矿业设备制造商和服务提供商。我们致力于为客户提供高质量的矿业解决方案，包括矿石分选、开采、运输等全系列设备和服务。</p>
+                    <p>凭借30多年的经验和不断创新的技术，我们已经成为矿业行业的领军企业。我们的产品和服务覆盖全球50多个国家和地区，赢得了客户的广泛赞誉。</p>
+                    <p>我们的核心价值观是"客户至上，质量第一"，始终致力于为客户提供最优质的产品和服务。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer>
+        <div class="copyright container">
+            <p>© 2025 舞阳矿业公司 版权所有</p>
+        </div>
+    </footer>
+    
+    <script>
+        // 汉堡菜单功能
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // 点击页面其他区域关闭菜单
+        document.addEventListener('click', (event) => {
+            if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
