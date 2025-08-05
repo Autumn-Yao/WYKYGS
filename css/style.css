@@ -1,0 +1,626 @@
+/* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        /* 容器 */
+        .container {
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* 头部区域 */
+        header {
+            background: linear-gradient(135deg, #2c3e50, #4a69bd);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo-container {
+            margin-bottom: 21px;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .slogan {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+        
+        /* 导航栏 */
+        nav {
+            background-color: #34495e;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            flex-grow: 1;
+            justify-content: center;
+        }
+        
+        .nav-links li {
+            margin: 0 15px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .hamburger-icon {
+            width: 25px;
+            height: 20px;
+            position: relative;
+            transform: rotate(0deg);
+            transition: .5s ease-in-out;
+        }
+        
+        .hamburger-icon span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 3px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+        
+        .hamburger-icon span:nth-child(1) {
+            top: 0px;
+        }
+        
+        .hamburger-icon span:nth-child(2) {
+            top: 8px;
+        }
+        
+        .hamburger-icon span:nth-child(3) {
+            top: 16px;
+        }
+        
+        /* Banner区域 */
+        .banner {
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .banner-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            padding: 30px;
+            color: white;
+        }
+        
+        .banner-overlay h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .banner-overlay p {
+            font-size: 1.1rem;
+            max-width: 800px;
+        }
+        
+        /* 主要内容区域 */
+        main {
+            padding: 40px 0;
+        }
+        
+        /* 关于我们部分 */
+        .about-section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4a69bd;
+            font-size: 1.8rem;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            height: 300px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-text p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        /* 页脚 */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px 0;
+            margin-top: auto;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: #bdc3c7;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #bdc3c7;
+        }
+        
+        /* 响应式设计 */
+        @media screen and (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: #34495e;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                padding: 20px 0;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .banner {
+                height: 250px;
+            }
+            
+            .banner-overlay h2 {
+                font-size: 1.5rem;
+            }
+            
+            .about-image, .about-text {
+                flex: 100%;
+            }
+        }
+		
+		
+		
+		/* 公司简介部分 */
+        .gsjj-section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 40px 0;
+        }
+        
+        .gsjj-title {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #4a69bd;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+        
+        .gsjj-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        /* 左图右文 */
+        .gsjj-left-image {
+            flex: 1;
+            min-width: 300px;
+            height: 250px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .gsjj-right-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .gsjj-right-text h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .gsjj-right-text p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        /* 右图左文 */
+        .gsjj-right-image {
+            flex: 1;
+            min-width: 300px;
+            height: 250px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .gsjj-left-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .gsjj-left-text h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .gsjj-left-text p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        /* 响应式设计 */
+        @media screen and (max-width: 768px) {
+            .gsjj-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .gsjj-left-image, .gsjj-right-image, .gsjj-left-text, .gsjj-right-text {
+                flex: 100%;
+            }
+        }
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/* 产品展示部分 */
+        .cpzs-section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 40px 0;
+        }
+        
+        .cpzs-title {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #4a69bd;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+        
+        .cpzs-product {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .cpzs-product-image {
+            flex: 1;
+            min-width: 300px;
+            height: 300px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .cpzs-product-info {
+            flex: 2;
+            min-width: 300px;
+        }
+        
+        .cpzs-product-name {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .cpzs-product-spec {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .cpzs-product-detail {
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .cpzs-product-advantage {
+            color: #4a69bd;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .cpzs-product-description {
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .cpzs-contact {
+            color: #2c3e50;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        
+        /* 响应式设计 */
+        @media screen and (max-width: 768px) {
+            .cpzs-product {
+                flex-direction: column;
+            }
+            
+            .cpzs-product-image, .cpzs-product-info {
+                flex: 100%;
+            }
+        }
+		
+		
+		
+		
+		
+		
+		
+		
+		/* 联系我们部分 */
+        .lxwm-section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 40px 0;
+        }
+        
+        .lxwm-title {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #4a69bd;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+        
+        .lxwm-intro {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .lxwm-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        /* 左侧联系方式 */
+        .lxwm-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .lxwm-info-title {
+            color: #4a69bd;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .lxwm-info-item {
+            margin-bottom: 20px;
+        }
+        
+        .lxwm-info-label {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            display: block;
+        }
+        
+        .lxwm-info-value {
+            color: #555;
+        }
+        
+        /* 右侧留言板 */
+        .lxwm-form {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .lxwm-form-title {
+            color: #4a69bd;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .lxwm-form-group {
+            margin-bottom: 20px;
+        }
+        
+        .lxwm-form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        
+        .lxwm-form-input,
+        .lxwm-form-textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .lxwm-form-textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .lxwm-form-button {
+            background-color: #4a69bd;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        .lxwm-form-button:hover {
+            background-color: #34495e;
+        }
+        
+        /* 响应式设计 */
+        @media screen and (max-width: 768px) {
+            .lxwm-content {
+                flex-direction: column;
+            }
+            
+            .lxwm-info, .lxwm-form {
+                flex: 100%;
+            }
+        }
